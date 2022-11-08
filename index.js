@@ -13,6 +13,25 @@ for (let smoothLink of smoothLinks) {
     });
 };
 
+const resultsItems = document.querySelectorAll('.result_item')
+const moreItems = document.querySelectorAll('.more')
+const textMoreItems = document.querySelectorAll('.more_text')
+const resultsBlockItems = document.querySelectorAll('.results')
+for(let i = 0; i < moreItems.length; i++){
+  moreItems[i].addEventListener('click', function () {
+    resultsBlockItems[i].classList.toggle('show')
+    moreItems[i].classList.toggle('less')
+    if(moreItems[i].classList.contains('less')){
+      textMoreItems[i].textContent = 'Свернуть'
+      resultsItems[i].style.marginBottom = '57px'
+    }else{
+      textMoreItems[i].textContent = 'Подробнее'
+      resultsItems[i].style.marginBottom = '24px'
+    }
+    
+  })  
+}
+
 let sttElem = document.querySelector('.arrow_up');
 
 let sttClick = function sttClick() {
@@ -51,8 +70,6 @@ questions.forEach(element => {
     
 
   })
-  // console.log(element)
 });
-// console.log(questions)
 
 document.addEventListener('DOMContentLoaded', sttClick);

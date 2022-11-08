@@ -40,7 +40,7 @@ a{
     text-decoration: none;
 }
 .container{
-    width: 1280px;
+    width: 1440px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -70,6 +70,15 @@ a{
     padding-right: 40px;
     padding-bottom: 40px;
     position: relative;
+}
+.bold{
+    font-weight: 700;
+}
+.transparent_color{
+    color: rgba(50, 50, 50, 0.5);
+}
+.green{
+    color:#2CA900;
 }
 .icon{
     display: flex;
@@ -175,8 +184,108 @@ nav ul li:last-child{
 }
 
 
+.results_wrapper{
+    margin-top: 46px;
+}
+
+.result_item{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    margin-bottom: 24px;
+}
+.result_data_wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #323232;
+    font-weight: 400;
+    margin-left: 40px;
+    margin-right: 59px;
+    margin-top: 20px;
+}
+.result_data_wrapper .partnership{
+    margin: 40px 0;
+    display: flex;
+    flex-direction: row;
+}
+.result_data_wrapper .partnership div{
+    display: flex;
+    flex-direction: column;
+}
+.result_data_wrapper .partnership div:first-child{
+    margin-right: 40px;
+}
+
+.result_data_wrapper .partnership div span:first-child{
+    margin-bottom: 16px;
+}
+
+
+.result_data_wrapper .budget{
+    margin-bottom: 40px;
+}
+
+.result_data_wrapper .budget{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.result_data_wrapper .budget div span:last-child{
+    font-size: 60px;
+    line-height: 73px;
+}
+
+@keyframes show{
+    0%{
+        opacity: 0;
+        height: 0;
+    }
+    50%{
+        opacity: 0;
+        height: 31px;
+    }
+    100%{
+        height: 62px;
+        opacity: 1;
+    }
+}
+.result_data_wrapper .results{
+    height: 0;
+    display: flex;
+    flex-direction: row;
+    opacity: 0;
+    transition: height 0.5s linear, opacity .5s linear;
+}
+.result_data_wrapper .results.show{
+    opacity: 1;
+    height: 62px;
+}
+.result_data_wrapper .results div{
+    margin-right: 80px;
+}
+.result_data_wrapper .results div span:first-child{
+    font-size: 12px;
+    line-height: 15px;
+}
+.result_data_wrapper .results div span:last-child{
+    font-size: 32px;
+    line-height: 39px;
+}
+
+
+
 .feedback_wrapper{
     width: 25%;
+    margin-right: 18px;
+    display: flex;
+    align-items: center;
+}
+.feedback_wrapper .feed_wrap{
     background: #FFFFFF;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.05);
     border-radius: 48px 48px 0 48px;
@@ -187,6 +296,7 @@ nav ul li:last-child{
 }
 .client_info{
     display: flex;
+    margin-bottom: 30px;
 }
 .client_photo_wrapper{
     margin-right: 16px;
@@ -213,6 +323,35 @@ nav ul li:last-child{
     color: #323232;
 }
 
+.more{
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    width: 35%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #F5C946;
+    border-radius: 48px 48px 0 0;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+.more.less{
+    border-radius: 0 0 48px 48px;
+    bottom: -32px;
+}
+.more p{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #000000;
+}
+
+
 .about_item{
     width: 33%;
     margin-right: 25px;
@@ -220,6 +359,9 @@ nav ul li:last-child{
 .about_item:last-child{
     margin-right: 0;
 }
+
+
+
 .collab_item{
     width: 50%;
     margin-right: 24px;
