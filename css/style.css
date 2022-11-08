@@ -259,7 +259,7 @@ nav ul li:last-child{
     display: flex;
     flex-direction: row;
     opacity: 0;
-    transition: height 0.5s linear, opacity .5s linear;
+    transition: height 0.2s linear, opacity .2s linear;
 }
 .result_data_wrapper .results.show{
     opacity: 1;
@@ -334,7 +334,7 @@ nav ul li:last-child{
     background: #F5C946;
     border-radius: 48px 48px 0 0;
     cursor: pointer;
-    transition: all 0.5s linear;
+    transition: all 0.2s linear;
 }
 .more.less{
     border-radius: 0 0 48px 48px;
