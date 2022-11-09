@@ -58,6 +58,9 @@ a{
     box-shadow: 0px 8px 16px rgba(245, 201, 70, 0.25);
     text-align: center;
 }
+.button:hover{
+    background: linear-gradient(180deg, #F5C946 0%, #FDC00C 100%);
+}
 .mt-80{
     margin-top: 80px;
 }
@@ -292,6 +295,11 @@ nav ul li:last-child{
 .client_photo_wrapper{
     margin-right: 16px;
 }
+.client_info .client_description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
 .feedback_wrapper .client_name{
     font-style: normal;
     font-weight: 700;
@@ -326,6 +334,9 @@ nav ul li:last-child{
     border-radius: 48px 48px 0 0;
     cursor: pointer;
     transition: all 0.2s linear;
+}
+.more:hover{
+    background: linear-gradient(180deg, #F5C946 0%, #FDC00C 100%);
 }
 .more.less{
     border-radius: 0 0 48px 48px;
@@ -434,7 +445,6 @@ nav ul li:last-child{
 }
 .form div input{
     background: #F5C946;
-    /* box-shadow: 0px 8px 16px rgba(142, 107, 0, 0.25); */
     border-radius: 16px;
     width: 100%;
     border: 1px solid #000000;
@@ -455,11 +465,16 @@ nav ul li:last-child{
     color: rgba(0, 0, 0, 0.25);
 }
 
-.form_button{
+.form .form_button{
     background: #FFFFFF;
     box-shadow: 0px 8px 16px rgba(142, 107, 0, 0.25);
     border-radius: 16px;
+    cursor: pointer;
 }
+.form .form_button:hover{
+    background: linear-gradient(180deg, #FFFFFF 0%, #F0F0F0 100%);
+}
+
 
 .question_wrapper{
     flex-direction: column;
@@ -502,6 +517,10 @@ nav ul li:last-child{
     background-color: #F5C946;
     cursor: pointer;
 }
+.more_info img:hover{
+    background: linear-gradient(180deg, #F5C946 0%, #FDC00C 100%);
+}
+
 
 footer{
     background-color: #F5C946;
@@ -540,4 +559,9 @@ footer h4{
     box-shadow: 0px 8px 16px rgba(245, 201, 70, 0.25);
     border-radius: 16px;
     padding: 20px;
+}
+
+.arrow_up img:hover{
+    background: #FFFFFF;
+    box-shadow: 0px 8px 16px rgba(245, 201, 70, 0.25);
 }
