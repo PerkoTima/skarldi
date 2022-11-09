@@ -56,11 +56,17 @@ a{
     line-height: 20px;
     text-transform: uppercase;
     box-shadow: 0px 8px 16px rgba(245, 201, 70, 0.25);
+    text-align: center;
+}
+.mt-80{
+    margin-top: 80px;
+}
+.mt-130{
+    margin-top: 130px;
 }
 .item_wrapper{
     display: flex;
     justify-content: space-between;
-    margin-top: 145px;
     margin-bottom: 100px;
 }
 .item{
@@ -186,6 +192,7 @@ nav ul li:last-child{
 
 .results_wrapper{
     margin-top: 46px;
+    margin-bottom: 100px;
 }
 
 .result_item{
@@ -240,20 +247,6 @@ nav ul li:last-child{
     line-height: 73px;
 }
 
-@keyframes show{
-    0%{
-        opacity: 0;
-        height: 0;
-    }
-    50%{
-        opacity: 0;
-        height: 31px;
-    }
-    100%{
-        height: 62px;
-        opacity: 1;
-    }
-}
 .result_data_wrapper .results{
     height: 0;
     display: flex;
@@ -276,8 +269,6 @@ nav ul li:last-child{
     font-size: 32px;
     line-height: 39px;
 }
-
-
 
 .feedback_wrapper{
     width: 25%;
@@ -409,6 +400,7 @@ nav ul li:last-child{
     width: 240px;
 }
 
+/* Форма обратной связи */
 .form_wrapper{
     width: 100%;
     background-color: #F5C946;
@@ -422,7 +414,52 @@ nav ul li:last-child{
     flex-direction: column;
     padding: 100px 365px;
 }
+.form div{
+    margin-bottom: 40px;
+    position: relative;
+}
 
+
+.form div .form_label{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    position: absolute;
+    top: -14px;
+    left: 30px;
+    background-color: #F5C946;
+    padding: 3px;
+}
+.form div input{
+    background: #F5C946;
+    /* box-shadow: 0px 8px 16px rgba(142, 107, 0, 0.25); */
+    border-radius: 16px;
+    width: 100%;
+    border: 1px solid #000000;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+.form div input::placeholder{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.form_button{
+    background: #FFFFFF;
+    box-shadow: 0px 8px 16px rgba(142, 107, 0, 0.25);
+    border-radius: 16px;
+}
 
 .question_wrapper{
     flex-direction: column;
