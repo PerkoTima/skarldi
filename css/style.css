@@ -8,10 +8,9 @@
 }
 h1{
     font-style: normal;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 34px;
-    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 59px;
     margin-top: 16px;
     margin-bottom: 32px;
 }
@@ -131,6 +130,11 @@ nav ul li{
 nav ul li:last-child{
     margin-right: 0;
 }
+nav ul li a{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
 
 .header_section{
     display: flex;
@@ -141,6 +145,14 @@ nav ul li:last-child{
     flex-direction: column;
     justify-content: center;
     width: 453px;
+}
+.header_h2{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    text-transform: uppercase;
+    text-align: start;
 }
 .header_name{
     font-style: normal;
@@ -187,6 +199,55 @@ nav ul li:last-child{
 .social_links a:last-child{
     margin-right: 0px;
 }
+.social_icon{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+}
+.tg_icon{
+    background-image: url('../images/sprites/telegram.svg');
+}
+.footer_tg_icon{
+    background-image: url('../images/sprites/footer_telegram.svg');
+}
+.tg_icon:hover,
+.footer_tg_icon:hover{
+    background-image: url('../images/sprites/telegram_hover.svg');
+}
+.wa_icon{
+    background-image: url('../images/sprites/whatsapp.svg');
+}
+.footer_wa_icon{
+    background-image: url('../images/sprites/footer_whatsapp.svg');
+}
+.wa_icon:hover,
+.footer_wa_icon:hover{
+    background-image: url('../images/sprites/whatsapphover.svg');
+}
+.inst_icon{
+    background-image: url('../images/sprites/instagram.svg');
+}
+.footer_inst_icon{
+    background-image: url('../images/sprites/footer_instagram.svg');
+}
+.inst_icon:hover,
+.footer_inst_icon:hover{
+    background-image: url('../images/sprites/instagram_hover.svg');
+}
+.phn_icon{
+    background-image: url('../images/sprites/phone.svg');
+}
+.footer_phn_icon{
+    background-image: url('../images/sprites/footer_phone.svg');
+}
+.phn_icon:hover,
+.footer_phn_icon:hover{
+    background-image: url('../images/sprites/phone_hover.svg');
+}
+
+
+
 .header_button{
     margin-top: 106px;
     margin-bottom: 80px;
@@ -386,6 +447,9 @@ nav ul li:last-child{
 .collaboration_list li{
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
+}
+.collaboration_list li:nth-last-child(2){
     margin-bottom: 42px;
 }
 .collaboration_list li:last-child{
@@ -533,6 +597,15 @@ footer .container{
     margin-top: 24px;
     margin-bottom: 37px;
 }
+footer .footer_info h2{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 59px;
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+
 
 .footer_section{
     display: flex;
