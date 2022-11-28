@@ -13,6 +13,7 @@ h1{
     line-height: 59px;
     margin-top: 16px;
     margin-bottom: 32px;
+    white-space: nowrap;
 }
 h2{
     font-style: normal;
@@ -84,6 +85,7 @@ a{
 }
 .transparent_color{
     color: rgba(50, 50, 50, 0.5);
+    white-space: nowrap;
 }
 .green{
     color:#2CA900;
@@ -246,8 +248,30 @@ nav ul li a{
     background-image: url('../images/sprites/phone_hover.svg');
 }
 
-
-
+.tel .tooltiptext {
+    visibility: hidden;
+    width: 150px;
+    background-color: #323232;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 25%;
+    margin-left: -75px;
+    font-size: 12px;
+  }
+  
+  .tel:hover .tooltiptext {
+    visibility: visible;
+  }
+.tel_mobile{
+    display: none;
+}
 .header_button{
     margin-top: 106px;
     margin-bottom: 80px;
@@ -636,4 +660,18 @@ footer h4{
 .arrow_up img:hover{
     background: #FFFFFF;
     box-shadow: 0px 8px 16px rgba(245, 201, 70, 0.25);
+}
+
+@media screen and (max-width: 1441px) and (min-width: 1282px)  {
+    .container{
+        max-width: 1280px;
+    }
+}
+@media screen and (max-width: 1281px) and (min-width: 997px)  {
+    .container{
+        max-width: 996px;
+    }
+}
+@media screen and (max-width: 1441){
+    
 }
