@@ -40,7 +40,8 @@ a{
     text-decoration: none;
 }
 .container{
-    width: 1440px;
+    max-width: 1280px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -146,7 +147,7 @@ nav ul li a{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 453px;
+    width: 36%;
 }
 .header_h2{
     font-style: normal;
@@ -162,6 +163,11 @@ nav ul li a{
     font-size: 48px;
     line-height: 59px;
     text-transform: capitalize;
+}
+
+.header_description p{
+    font-size: 20px;
+    line-height: 26px;
 }
 .fb_color{
     color: #3E74DA;
@@ -180,12 +186,15 @@ nav ul li a{
     -webkit-text-fill-color: transparent;
 }
 
+.header_image{
+    width: 47.2%;
+}
 .header_section .photo_shadow{
     position: relative;
     background-color: #F5C946;
     border-radius: 48px;
     width: 604px;
-    height: 709px;
+    height: 710px;
 }
 .header_section .photo{
     position: absolute;
@@ -193,6 +202,9 @@ nav ul li a{
     top: 32px;
     right: 32px;
     filter: drop-shadow(0px 1px 16px rgba(0, 0, 0, 0.25));
+    width: 100%;
+    height: 100%;
+    background-size: cover;
 }
 
 .social_links a{
@@ -247,7 +259,9 @@ nav ul li a{
 .footer_phn_icon:hover{
     background-image: url('../images/sprites/phone_hover.svg');
 }
-
+.tel{
+    position: relative;
+}
 .tel .tooltiptext {
     visibility: hidden;
     width: 150px;
@@ -260,8 +274,8 @@ nav ul li a{
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
-    top: 100%;
-    left: 25%;
+    top: -60px;
+    left: 55%;
     margin-left: -75px;
     font-size: 12px;
   }
@@ -284,10 +298,16 @@ nav ul li a{
 }
 
 .result_item{
-    display: flex;
-    justify-content: space-between;
     padding-top: 40px;
     margin-bottom: 24px;
+}
+.result_item h4{
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.result_wrapper{
+    display: flex;
+    justify-content: space-between;
 }
 .result_data_wrapper{
     display: flex;
@@ -301,7 +321,6 @@ nav ul li a{
     font-weight: 400;
     margin-left: 40px;
     margin-right: 59px;
-    margin-top: 20px;
 }
 .result_data_wrapper .partnership{
     margin: 40px 0;
@@ -662,14 +681,90 @@ footer h4{
     box-shadow: 0px 8px 16px rgba(245, 201, 70, 0.25);
 }
 
-@media screen and (max-width: 1441px) and (min-width: 1282px)  {
+@media screen and (max-width: 1279px) and (min-width: 768px)  {
     .container{
-        max-width: 1280px;
+        max-width: 768px;
     }
-}
-@media screen and (max-width: 1281px) and (min-width: 997px)  {
-    .container{
-        max-width: 996px;
+
+    h1{
+        font-size: 38px;
+        line-height: 46px;
+    }
+
+    .header_h2{
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .header_description{
+        width: 50%;
+    }
+    .header_description p,
+    .header_description p .fb_color,
+    .header_description p .inst_color{
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .header_button{
+        margin-top: 80px;
+        margin-bottom: 60px;
+    }
+
+    .header_image{
+        width: 45%;
+    }
+    .header_section .photo_shadow{
+        width: 346px;
+        height: 406px;
+    }
+    .header_section .photo_shadow img{
+        top: 18px;
+        right: 18px;
+    }
+
+    .item_wrapper{
+        flex-direction: column;
+    }
+    .about_item{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 90px;
+    }
+    .about_item h3{
+        text-align: center;
+    }
+
+    .result_wrapper{
+        flex-direction: column-reverse;
+        margin-top: 40px;
+    }
+    .result_item h4 {
+        margin-left: 0;
+    }
+
+    .result_data_wrapper{
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .feedback_wrapper{
+        width: 100%;
+    }
+
+
+    .collab_item{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 89px;
+    }
+    .collaboration_list{
+        margin-bottom: 62px;
+    }
+    .collab_item .button_wrapper .button {
+        width: 100%;
+    }
+
+    .form{
+        padding: 50px 40px;
     }
 }
 @media screen and (max-width: 1441){
