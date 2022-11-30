@@ -1,60 +1,34 @@
 "use strict";
-
-const smoothLinks = document.querySelectorAll('a[href^="#"]');
-for (let smoothLink of smoothLinks) {
-    smoothLink.addEventListener('click', function (e) {
-        e.preventDefault();
-        const id = smoothLink.getAttribute('href');
-
-        document.querySelector(id).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-    });
-};
-
-const resultsItems = document.querySelectorAll('.result_item')
-const moreItems = document.querySelectorAll('.more')
-const textMoreItems = document.querySelectorAll('.more_text')
-const resultsBlockItems = document.querySelectorAll('.results')
-for(let i = 0; i < moreItems.length; i++){
-  moreItems[i].addEventListener('click',  () => {
-    resultsBlockItems[i].classList.toggle('show')
-    moreItems[i].classList.toggle('less')
-    if(moreItems[i].classList.contains('less')){
-      textMoreItems[i].textContent = 'Свернуть'
-      resultsItems[i].style.marginBottom = '57px'
-    }else{
-      textMoreItems[i].textContent = 'Подробнее'
-      resultsItems[i].style.marginBottom = '24px'
-    }
-    
-  })  
-}
-
-
-let sttElem = document.querySelector('.arrow_up');
-
-let sttClick = function sttClick() {
-  sttElem.addEventListener('click', function () {
-    let docHeight = window.scrollY;
-    let progress = 0;
-    let position = docHeight;
-    let speed = 5;
-
-    let sttAnim = function sttAnim() {
-      progress += 1;
-      position -= progress * speed;
-      window.scrollTo(0, position);
-
-      if (position > 0) {
-        requestAnimationFrame(sttAnim);
-      }
-    };
-
-    requestAnimationFrame(sttAnim);
+$(document).ready(function(){
+  $('a[href^="#"]').on("click", function (event) {
+    event.preventDefault();
+    let id  = $(this).attr('href'),
+      top = $(id).offset().top - 100;
+    $('body,html').animate({scrollTop: top}, 500);
   });
-};
+  $('.arrow_up').on('click', function(){
+    $('body,html').animate({scrollTop: 0}, 500);
+  })
+  $(window).scroll(function() {
+    let height = $(window).scrollTop();
+    if(height > 500){
+      $('.menu_button').removeClass('disactive');
+    } else{
+      $('.menu_button').addClass('disactive');
+    }
+  });
+  $('.more').on('click', function(){
+    $(this).toggleClass('less')
+    $(this).parent().find('.results').toggleClass('show')
+    if($(this).hasClass('less')){
+      $(this).parent().find('.more_text').text('Свернуть')
+      $(this).parent().css({'margin-bottom': '57px'})
+    }else{
+      $(this).parent().find('.more_text').text('Подробнее')
+      $(this).parent().css({'margin-bottom': '24px'})
+    }
+  }) 
+});
 
 const questions = document.querySelectorAll('.more_info img');
 const text = document.querySelectorAll('.text')
@@ -73,20 +47,6 @@ for(let i = 0; i < questions.length; i++){
     }
   })
 }
-// questions.forEach(element => {
-//   element.addEventListener('click', () => {
-//     text.forEach(n => n.classList.remove('active'))
-//     questions.forEach(e => e.src = './images/sprites/plus.svg')
-//     if(!element.parentElement.previousElementSibling.querySelector('p').classList.contains('active')){
-//       element.parentElement.previousElementSibling.querySelector('p').classList.add('active')
-//       element.src = './images/sprites/minus.svg'
-      
-//     }else{
-//       element.parentElement.previousElementSibling.querySelector('p').classList.remove('active')
-//       element.src = './images/sprites/plus.svg'
-//     }
-//   })
-// });
 
 function copy(){
   const copyText = document.querySelector('.tel')
@@ -105,4 +65,3 @@ function copy(){
     
 }
 
-document.addEventListener('DOMContentLoaded', sttClick);
