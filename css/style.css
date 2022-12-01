@@ -6,6 +6,9 @@
     color: #323232;
     font-family: 'Montserrat', sans-serif;
 }
+body{
+    background-color: #F5F5F5;
+}
 h1{
     font-style: normal;
     font-weight: 300;
@@ -84,9 +87,6 @@ a{
     padding-right: 40px;
     padding-bottom: 40px;
     position: relative;
-}
-.mb_57{
-    margin-bottom: 57px;
 }
 .bold{
     font-weight: 700;
@@ -408,7 +408,8 @@ nav ul li a{
     padding-top: 20px;
     padding-right: 30px;
     padding-left: 30px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
+    margin-top: -44px;
 }
 .client_info{
     display: flex;
@@ -698,6 +699,13 @@ footer h4{
 .arrow_up img:hover{
     background: #FFFFFF;
     box-shadow: 0px 8px 16px rgba(245, 201, 70, 0.25);
+}
+
+.link{
+    color: #3E74DA;
+}
+.link:hover{
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 1279px)  {

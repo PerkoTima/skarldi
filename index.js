@@ -47,7 +47,6 @@ for(let i = 0; i < questions.length; i++){
     }
   })
 }
-
 function copy(){
   const copyText = document.querySelector('.tel')
   const tooltip = document.querySelector('.tooltiptext')
@@ -64,4 +63,3 @@ function copy(){
     })
     
 }
-
