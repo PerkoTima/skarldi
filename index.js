@@ -3,63 +3,49 @@ $(document).ready(function(){
   $('a[href^="#"]').on("click", function (event) {
     event.preventDefault();
     let id  = $(this).attr('href'),
-      top = $(id).offset().top - 100;
+    top = $(id).offset().top - 100;
     $('body,html').animate({scrollTop: top}, 500);
   });
   $('.arrow_up').on('click', function(){
     $('body,html').animate({scrollTop: 0}, 500);
-  })
+  });
   $(window).scroll(function() {
     let height = $(window).scrollTop();
     if(height > 500){
       $('.menu_button').removeClass('disactive');
+      $('nav').addClass('shadow');
     } else{
       $('.menu_button').addClass('disactive');
+      $('nav').removeClass('shadow');
     }
   });
   $('.more').on('click', function(){
-    $(this).toggleClass('less')
-    $(this).parent().find('.results').toggleClass('show')
-    if($(this).hasClass('less')){
-      $(this).parent().find('.more_text').text('Свернуть')
-      $(this).parent().css({'margin-bottom': '57px'})
-    }else{
-      $(this).parent().find('.more_text').text('Подробнее')
-      $(this).parent().css({'margin-bottom': '24px'})
-    }
-  }) 
-});
-
-const questions = document.querySelectorAll('.more_info img');
-const text = document.querySelectorAll('.text')
-
-for(let i = 0; i < questions.length; i++){
-  questions[i].addEventListener('click', () => {
-    text.forEach(n => n.classList.remove('active'))
-    questions.forEach(n => n.src = './images/sprites/plus.svg')
-    // text[i].classList.toggle('active')
-    if(text[i].classList.contains('active')){
-      questions[i].src = './images/sprites/plus.svg'
-      text[i].classList.remove('active')
-    }else{
-      text[i].classList.add('active')
-      questions[i].src = './images/sprites/minus.svg'
-    }
-  })
-}
-function copy(){
-  const copyText = document.querySelector('.tel')
-  const tooltip = document.querySelector('.tooltiptext')
-
-  navigator.clipboard.writeText(copyText.dataset.tel)
+    $('.results').not($(this).parent().find('.results')).slideUp(500);
+    $(this).parent().find('.results').slideToggle(500);
+    $('.more_text').not($(this).find('.more_text')).addClass('active');
+    $('.less_text').not($(this).find('.less_text')).removeClass('active');
+    $(this).find('.more_text').toggleClass('active');
+    $(this).find('.less_text').toggleClass('active');
+    $(this).parent().addClass('mb_57');
+    $(this).toggleClass('less');
+    $('.result_item').not($(this).parent()).removeClass('mb_57');
+    $('.more').not($(this)).removeClass('less');
+  });
+  $('.more_info .more-icon').on('click', function(){
+    $('.question_info .text').not($(this).parent().prev().find('.text')).slideUp(500);
+    $('.more-icon').not($(this)).removeClass('icon-minus').addClass('icon-plus');
+    $(this).toggleClass('icon-plus').toggleClass('icon-minus').parent().prev().find('.text').slideToggle(500);
+  });
+  $('.tel').on('click', function(){
+    navigator.clipboard.writeText($(this).attr('data-tel'))
     .then(() => {
-      tooltip.innerHTML = 'Скопировано'
+      $('.tooltiptext').text('Скопировано');
     })
     .catch(err => {
       console.log('Something went wrong', err);
     })
     .finally(()=>{
-      setTimeout(()=> {tooltip.innerHTML = 'Скопировать номер'}, 500) 
+      setTimeout(()=> {$('.tooltiptext').text('Скопировать номер')}, 500);
     })
-    
-}
+  });
+});
