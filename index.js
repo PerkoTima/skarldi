@@ -26,9 +26,9 @@ $(document).ready(function(){
     $('.less_text').not($(this).find('.less_text')).removeClass('active');
     $(this).find('.more_text').toggleClass('active');
     $(this).find('.less_text').toggleClass('active');
-    $(this).parent().addClass('mb_57');
     $(this).toggleClass('less');
     $('.result_item').not($(this).parent()).removeClass('mb_57');
+    $(this).parent().toggleClass('mb_57');
     $('.more').not($(this)).removeClass('less');
   });
   $('.more_info .more-icon').on('click', function(){
