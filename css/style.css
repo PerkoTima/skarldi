@@ -854,15 +854,66 @@ footer h4{
     .form{
         padding: 50px 40px;
     }
+    .thank_form{
+        padding-top: 85px;
+        padding-bottom: 85px;
+    }
 }
 @media screen and (max-width: 767px) {
+    nav{
+        display: none;
+    }
+    .header_description{
+        width: 100%;
+    }
+    .social_links{
+        display: flex;
+        justify-content: center;
+    }
+    .header_button {
+        margin-top: 48px;
+        margin-bottom: 50px;
+    }
+    .header_image{
+        display: none;
+    }
     .container{
-        max-width: 100%;
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .more{
+        width: 80%;
+    }
+
+    .question_info{
+        width: 80%;
     }
     .tel{
         display: none;
     }
     .tel_mobile{
         display: block;
+    }
+
+    .tg_icon,
+    .footer_tg_icon{
+        background-image: url('../images/sprites/telegram_hover.svg');
+    }
+    .wa_icon,
+    .footer_wa_icon{
+        background-image: url('../images/sprites/whatsapphover.svg');
+    }
+    .inst_icon,
+    .footer_inst_icon{
+        background-image: url('../images/sprites/instagram_hover.svg');
+    }
+    .phn_icon,
+    .footer_phn_icon{
+        background-image: url('../images/sprites/phone_hover.svg');
+    }
+    .footer_container{
+        flex-direction: column;
     }
 }
