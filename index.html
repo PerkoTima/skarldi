@@ -446,17 +446,23 @@
     <section class="container" id="form">
         <h2>Консультация</h2>
         <div class="form_wrapper">
-            <form action="" class="form">
+            <form action="" class="form active">
                 <div>
                     <label class="form_label" for="name">Имя</label>
-                    <input type="text" id="name" placeholder="John Doe" required>
+                    <input type="text"  id="name" placeholder="Диана" required>
                 </div>
                 <div>
                     <label class="form_label" for="phone">Телефон</label>
-                    <input type="tel" id="phone" placeholder="+37529-123-4567" required>
+                    <input type="tel" name="phone" id="phone" placeholder="+37529-123-4567" required>
                 </div>
                 <button class="button form_button">Получить консультацию</button>
             </form>
+            <div class="thank_form">
+                <span><img src="./images/sprites/like.svg" alt=""></span>
+                <p class="thank_you">Спасибо!</p>
+                <p class="contact_you">Я скоро с вами свяжусь!</p>
+                <span class="refresh" title="Показать форму"><img src="./images/sprites/refresh.svg" alt=""></span>
+            </div>
         </div>
     </section>
     <section class="container">
@@ -524,6 +530,7 @@
             </div>
         </div>
     </footer>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./index.js"></script>
 </body>

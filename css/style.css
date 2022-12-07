@@ -77,7 +77,7 @@ a{
 }
 
 .shadow{
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
 }
 .mt-80{
     margin-top: 80px;
@@ -166,6 +166,9 @@ nav ul li a{
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
+}
+nav ul li a:hover{
+    text-decoration: underline;
 }
 
 .header_section{
@@ -456,7 +459,6 @@ nav ul li a{
     color: #323232;
 }
 
-
 .more{
     position: absolute;
     bottom: 0;
@@ -468,11 +470,12 @@ nav ul li a{
     background: #F5C946;
     border-radius: 48px 48px 0 0;
     cursor: pointer;
-    transition: all 0.2s linear;
+    /* transition: all 0.2s linear; */
+    transition: height 0.2s linear;
 }
 .more:hover{
     background: linear-gradient(180deg, #F5C946 0%, #FDC00C 100%);
-}
+} 
 .more.less{
     border-radius: 0 0 48px 48px;
     bottom: -32px;
@@ -573,7 +576,7 @@ nav ul li a{
 }
 
 .form{
-    display: flex;
+    display: none;
     flex-direction: column;
     padding: 100px 365px;
 }
@@ -581,8 +584,6 @@ nav ul li a{
     margin-bottom: 40px;
     position: relative;
 }
-
-
 .form div .form_label{
     font-style: normal;
     font-weight: 700;
@@ -626,6 +627,43 @@ nav ul li a{
 }
 .form .form_button:hover{
     background: linear-gradient(180deg, #FFFFFF 0%, #F0F0F0 100%);
+}
+.thank_form{
+    padding-top: 137px;
+    padding-bottom: 137px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+.thank_you{
+    margin-top: 33px;
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #323232;
+}
+.contact_you{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.refresh{
+    cursor: pointer;
+    margin-top: 33px;
+}
+.timer{
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: -0.02em;
+    color: #000000;
+    margin-top: 10px;
+}
+.form.active,
+.thank_form.active{
+    display: flex;
 }
 
 .question_wrapper{

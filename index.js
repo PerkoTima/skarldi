@@ -11,13 +11,8 @@ $(document).ready(function(){
   });
   $(window).scroll(function() {
     let height = $(window).scrollTop();
-    if(height > 500){
-      $('.menu_button').removeClass('disactive');
-      $('nav').addClass('shadow');
-    } else{
-      $('.menu_button').addClass('disactive');
-      $('nav').removeClass('shadow');
-    }
+    height > 620 ? $('.menu_button').removeClass('disactive') : $('.menu_button').addClass('disactive');
+    height > 130 ? $('nav').addClass('shadow') : $('nav').removeClass('shadow');
   });
   $('.more').on('click', function(){
     $('.results').not($(this).parent().find('.results')).slideUp(500);
@@ -48,4 +43,18 @@ $(document).ready(function(){
       setTimeout(()=> {$('.tooltiptext').text('Скопировать номер')}, 500);
     })
   });
+  $('.form').on('submit', function(e){
+    e.preventDefault()
+    $(this).removeClass('active')
+    $(this).next().addClass('active')
+
+    let message = `<b>Заявка с сайта</b>\n`
+    message += `<b>Client:</b> ${this.name.value}\n`
+    message += `<b>Phone:</b> ${this.phone.value}\n`
+  })
+  $('.refresh').on('click', function(){
+    $('input').val('')
+    $(this).parent().prev().addClass('active')
+    $(this).parent().removeClass('active')
+  })
 });
