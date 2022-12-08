@@ -1,5 +1,10 @@
 "use strict";
 $(document).ready(function(){
+  const TOKEN = '5939845302:AAGn2XmkaJGp_rtADkq9oVk24dvECwVXiww'
+  const CHAT_ID = '207535650'
+  const URL_API = `https://api.telegram.org/bot${ TOKEN }/sendMessage`
+  const IPINFO_TOKEN = 'c980e0b6c7a3df'
+
   $('a[href^="#"]').on("click", function (event) {
     event.preventDefault();
     let id  = $(this).attr('href'),
@@ -43,18 +48,63 @@ $(document).ready(function(){
       setTimeout(()=> {$('.tooltiptext').text('Скопировать номер')}, 500);
     })
   });
-  $('.form').on('submit', function(e){
+  $('.form').submit(function(e){
     e.preventDefault()
-    $(this).removeClass('active')
-    $(this).next().addClass('active')
-
     let message = `<b>Заявка с сайта</b>\n`
     message += `<b>Client:</b> ${this.name.value}\n`
     message += `<b>Phone:</b> ${this.phone.value}\n`
-  })
+    axios.post(URL_API, {
+      chat_id: CHAT_ID,
+      parse_mode: 'html',
+      text: message,
+    })
+    .then(() => {
+      $(this).removeClass('active')
+      $(this).next().addClass('active')
+    })
+    .catch(err => {
+        console.log(err)
+    })
+    })
   $('.refresh').on('click', function(){
     $('input').val('')
     $(this).parent().prev().addClass('active')
     $(this).parent().removeClass('active')
   })
-});
+  $(function () {
+    var input = $('#phone');
+    var iti_el = $('.iti.iti--allow-dropdown.iti--separate-dial-code');
+    if(iti_el.length){
+        iti.destroy();
+    }
+    for(var i = 0; i < input.length; i++){
+      iti_el = intlTelInput(input[i], {
+        autoHideDialCode: false,
+        autoPlaceholder: "aggressive" ,
+        initialCountry: "auto",
+        separateDialCode: true,
+        preferredCountries: ['by','fr','it','de','es','ae','ru'],
+        customPlaceholder:function(selectedCountryPlaceholder,selectedCountryData){
+          return ''+selectedCountryPlaceholder.replace(/[0-9]/g,'X');
+        },
+        geoIpLookup: function(callback) {
+          $.get(`https://ipinfo.io/json?token=${IPINFO_TOKEN}`, function() {}, "jsonp").always(function(resp) {
+            var countryCode = (resp && resp.country) ? resp.country : "";
+            callback(countryCode);
+          });
+        },
+        utilsScript: "./utils.js"
+      });
+      input.on("focus click countrychange", function(e, countryData) {
+        var pl = $(this).attr('placeholder') + '';
+        var res = pl.replace( /X/g ,'9');
+        if(res != 'undefined'){
+            $(this).inputmask(res, {placeholder: "X", clearMaskOnLostFocus: true});
+        }
+      });  
+      input.on("focusout", function(e, countryData) {
+        iti_el.getNumber();
+      });
+    }
+  })
+})

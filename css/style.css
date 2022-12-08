@@ -217,7 +217,6 @@ nav ul li a:hover{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
 .header_image{
     width: 47.2%;
 }
@@ -580,7 +579,7 @@ nav ul li a:hover{
     flex-direction: column;
     padding: 100px 365px;
 }
-.form div{
+.form .input_wrapper{
     margin-bottom: 40px;
     position: relative;
 }
@@ -595,6 +594,7 @@ nav ul li a:hover{
     left: 30px;
     background-color: #F5C946;
     padding: 3px;
+    z-index: 1000;
 }
 .form div input{
     background: #F5C946;
@@ -771,12 +771,10 @@ footer h4{
     .container{
         max-width: 768px;
     }
-
     h1{
         font-size: 38px;
         line-height: 46px;
     }
-
     .header_h2{
         font-size: 20px;
         line-height: 24px;
@@ -794,7 +792,6 @@ footer h4{
         margin-top: 80px;
         margin-bottom: 60px;
     }
-
     .header_image{
         width: 45%;
     }
@@ -806,7 +803,6 @@ footer h4{
         top: 18px;
         right: 18px;
     }
-
     .item_wrapper{
         flex-direction: column;
     }
@@ -818,7 +814,6 @@ footer h4{
     .about_item h3{
         text-align: center;
     }
-
     .result_wrapper{
         flex-direction: column-reverse;
         margin-top: 40px;
@@ -826,7 +821,6 @@ footer h4{
     .result_item h4 {
         margin-left: 0;
     }
-
     .result_data_wrapper{
         width: 100%;
         margin-left: 0;
@@ -838,7 +832,6 @@ footer h4{
     .feedback_wrapper .feed_wrap{
         margin-top: 0;
     }
-
     .collab_item{
         width: 100%;
         margin-right: 0;
@@ -850,7 +843,6 @@ footer h4{
     .collab_item .button_wrapper .button {
         width: 100%;
     }
-
     .form{
         padding: 50px 40px;
     }
