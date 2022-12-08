@@ -25,6 +25,7 @@ h2{
     font-size: 48px;
     line-height: 59px;
     text-align: center;
+    margin-top: 200px;
 }
 h3{
     font-style: normal;
@@ -188,6 +189,7 @@ nav ul li a:hover{
     line-height: 34px;
     text-transform: uppercase;
     text-align: start;
+    margin-top: 0;
 }
 .header_name{
     font-style: normal;

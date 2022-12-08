@@ -48,29 +48,12 @@ $(document).ready(function(){
       setTimeout(()=> {$('.tooltiptext').text('Скопировать номер')}, 500);
     })
   });
-  $('.form').submit(function(e){
-    e.preventDefault()
-    let message = `<b>Заявка с сайта</b>\n`
-    message += `<b>Client:</b> ${this.name.value}\n`
-    message += `<b>Phone:</b> ${this.phone.value}\n`
-    axios.post(URL_API, {
-      chat_id: CHAT_ID,
-      parse_mode: 'html',
-      text: message,
-    })
-    .then(() => {
-      $(this).removeClass('active')
-      $(this).next().addClass('active')
-    })
-    .catch(err => {
-        console.log(err)
-    })
-    })
   $('.refresh').on('click', function(){
     $('input').val('')
     $(this).parent().prev().addClass('active')
     $(this).parent().removeClass('active')
   })
+  let phone = ''
   $(function () {
     var input = $('#phone');
     var iti_el = $('.iti.iti--allow-dropdown.iti--separate-dial-code');
@@ -103,8 +86,26 @@ $(document).ready(function(){
         }
       });  
       input.on("focusout", function(e, countryData) {
-        iti_el.getNumber();
+        phone = iti_el.getNumber();
       });
     }
   })
+  $('.form').submit(function(e){
+    e.preventDefault()
+    let message = `<b>Заявка с сайта</b>\n`
+    message += `<b>Client:</b> ${this.name.value}\n`
+    message += `<b>Phone:</b> ${phone}\n`
+    axios.post(URL_API, {
+      chat_id: CHAT_ID,
+      parse_mode: 'html',
+      text: message,
+    })
+    .then(() => {
+      $(this).removeClass('active')
+      $(this).next().addClass('active')
+    })
+    .catch(err => {
+        console.log(err)
+    })
+    })
 })
