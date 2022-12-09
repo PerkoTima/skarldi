@@ -427,10 +427,14 @@ nav ul li a:hover{
     display: flex;
     flex-direction: column;
 }
+
 .result_data_wrapper .partnership div:first-child{
     margin-right: 40px;
 }
-
+.result_data_wrapper .partnership div:last-child{
+    border-left: 1px solid black;
+    padding-left: 16px;
+}
 .result_data_wrapper .partnership div span:first-child{
     margin-bottom: 16px;
 }
@@ -875,6 +879,9 @@ footer h4{
         margin-right: 0;
         margin-bottom: 90px;
     }
+    .about_item:last-child{
+        margin-bottom: 0;
+    }
     .about_item h3{
         text-align: center;
     }
@@ -901,6 +908,9 @@ footer h4{
         margin-right: 0;
         margin-bottom: 89px;
     }
+    .collab_item:last-child{
+        margin-bottom: 0;
+    }
     .collaboration_list{
         margin-bottom: 62px;
     }
@@ -916,11 +926,27 @@ footer h4{
     }
 }
 @media screen and (max-width: 767px) {
+    h1{
+        font-size: 32px;
+    }
+    h2{
+        margin-top: 100px;
+        font-size: 28px;
+    }
+    header{
+        margin-bottom: 0;
+        margin-top: 135px;
+    }
     nav{
         display: none;
     }
     .header_description{
         width: 100%;
+        margin-top: 60px;
+        text-align: center;
+    }
+    .header_h2{
+        text-align: center;
     }
     .social_links{
         display: flex;
@@ -930,16 +956,113 @@ footer h4{
         margin-top: 48px;
         margin-bottom: 50px;
     }
+    .header_section{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .header_section .photo_shadow{
+        width: 280px;
+        height: 328px;
+    }
     .header_image{
-        display: none;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        margin-right: -6px;
+    }
+    .header_section .photo_shadow img {
+        top: 12px;
+        right: 12px;
     }
     .container{
         width: 90%;
         margin-right: auto;
         margin-left: auto;
     }
-
+    .item{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .item p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .collaboration_list li{
+        margin-bottom: 15px;
+    }
+    .collaboration_list li span:first-child {
+        margin-right: 10px;
+    }
+    .collaboration_list li span:last-child {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .collaboration_list li span img{
+        width: 25px;
+    }
+    .iti--separate-dial-code .iti__selected-dial-code {
+        font-size: 16px!important;
+    }
+    .button{
+        font-size: 14px;
+    }
+    .result_data_wrapper .budget {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 0;
+        width: 50%;
+    }
+    .result_data_wrapper .budget_wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .result_data_wrapper {
+        font-size: 14px;
+    }
+    .result_data_wrapper .results{
+        display: block;
+        width: 45%;
+    }
+    .result_data_wrapper .partnership{
+        flex-direction: column;
+    }
+    .result_data_wrapper .partnership div:last-child{
+        border-left: none;
+        padding-left: 0;
+    }
+    .result_data_wrapper .partnership div span:first-child {
+        margin-bottom: 5px;
+    }
+    .result_data_wrapper .partnership div span:last-child {
+        margin-bottom: 15px;
+    }
+    .result_data_wrapper .partnership div:last-child span:last-child {
+        margin-bottom: 0px;
+    }
+    .result_item h4 {
+        margin-top: 0;
+    }
+    .result_data_wrapper .transparent_color {
+        font-size: 12px;
+    }
+    .result_data_wrapper .results div span:last-child {
+        font-size: 28px;
+    }
+    .result_data_wrapper .budget div span:last-child {
+        font-size: 40px;
+        line-height: 60px;
+    }
+    .result_data_wrapper .results .flex_results {
+        display: flex;
+        flex-direction: column;
+        border-left: 1px solid black;
+        padding-left: 16px;
+    }
     .more{
+        display: none;
         width: 80%;
     }
 
@@ -952,22 +1075,59 @@ footer h4{
     .tel_mobile{
         display: block;
     }
+    .inst_icon path:nth-child(1),
+    .footer_inst_icon path:nth-child(1){
+        fill: url(#instagram1);
+        fill-opacity: 1;
+    }
+    .inst_icon path:nth-child(2),
+    .footer_inst_icon path:nth-child(2){
+        fill: url(#instagram2);
+        fill-opacity: 1;
+    }
+    .wa_icon path:nth-child(1),
+    .wa_icon path:nth-child(2),
+    .wa_icon path:nth-child(5),
+    .footer_wa_icon path:nth-child(1),
+    .footer_wa_icon path:nth-child(2),
+    .footer_wa_icon path:nth-child(5){
+        fill: #ffffff;
+        fill-opacity: 1;
+    }
+    .wa_icon path:nth-child(3),
+    .footer_wa_icon path:nth-child(3){
+        fill: #CFD8DC;
+        fill-opacity: 1;
+    }
+    .wa_icon path:nth-child(4),
+    .footer_wa_icon path:nth-child(4){
+        fill: #40C351;
+        fill-opacity: 1;
+    }
 
-    .tg_icon,
-    .footer_tg_icon{
-        background-image: url('../images/sprites/telegram_hover.svg');
+    .inst_icon path:nth-child(3),
+    .inst_icon path:nth-child(4),
+    .inst_icon path:nth-child(5),
+    .footer_inst_icon path:nth-child(3),
+    .footer_inst_icon path:nth-child(4),
+    .footer_inst_icon path:nth-child(5),
+    .tg_icon path:nth-child(4),
+    .footer_tg_icon path:nth-child(4){
+        fill: #ffffff;
     }
-    .wa_icon,
-    .footer_wa_icon{
-        background-image: url('../images/sprites/whatsapphover.svg');
+    .tg_icon path:nth-child(1),
+    .footer_tg_icon path:nth-child(1){
+        fill: url(#telegram);
+        fill-opacity: 1;
     }
-    .inst_icon,
-    .footer_inst_icon{
-        background-image: url('../images/sprites/instagram_hover.svg');
+    .phn_icon path,
+    .footer_phn_icon path{
+        fill: #ffffff;
     }
-    .phn_icon,
-    .footer_phn_icon{
-        background-image: url('../images/sprites/phone_hover.svg');
+    .phn_icon rect,
+    .footer_phn_icon rect{
+        fill: #2CA900;
+        fill-opacity: 1;
     }
     .footer_container{
         flex-direction: column;
