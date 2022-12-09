@@ -31,10 +31,10 @@ $(document).ready(function(){
     $(this).parent().toggleClass('mb_57');
     $('.more').not($(this)).removeClass('less');
   });
-  $('.more_info .more-icon').on('click', function(){
+  $('.more_info img').on('click', function(){
     $('.question_info .text').not($(this).parent().prev().find('.text')).slideUp(500);
-    $('.more-icon').not($(this)).removeClass('icon-minus').addClass('icon-plus');
-    $(this).toggleClass('icon-plus').toggleClass('icon-minus').parent().prev().find('.text').slideToggle(500);
+    $('.more_info img').not($(this)).attr('src', '../images/sprites/plus.svg');
+    $(this).attr('src') == '../images/sprites/minus.svg' ? $(this).attr('src', '../images/sprites/plus.svg').parent().prev().find('.text').slideToggle(500) : $(this).attr('src', '../images/sprites/minus.svg').parent().prev().find('.text').slideToggle(500);
   });
   $('.tel').on('click', function(){
     navigator.clipboard.writeText($(this).attr('data-tel'))
