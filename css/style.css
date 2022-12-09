@@ -1006,6 +1006,9 @@ footer h4{
     .button{
         font-size: 14px;
     }
+    .result_wrapper {
+        margin-top: 24px;
+    }
     .result_data_wrapper .budget {
         display: flex;
         flex-direction: column;
@@ -1022,12 +1025,14 @@ footer h4{
     .result_data_wrapper {
         font-size: 14px;
     }
+    
     .result_data_wrapper .results{
         display: block;
         width: 45%;
     }
     .result_data_wrapper .partnership{
         flex-direction: column;
+        margin-top: 24px;
     }
     .result_data_wrapper .partnership div:last-child{
         border-left: none;
@@ -1044,6 +1049,7 @@ footer h4{
     }
     .result_item h4 {
         margin-top: 0;
+        text-align: center;
     }
     .result_data_wrapper .transparent_color {
         font-size: 12px;
