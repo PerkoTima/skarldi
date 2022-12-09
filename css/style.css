@@ -252,47 +252,112 @@ nav ul li a:hover{
     height: 40px;
     background-size: cover;
 }
-.tg_icon{
-    background-image: url('../images/sprites/telegram.svg');
+
+.tg_icon path:nth-child(1){
+    fill:#CFD8DC;
 }
-.footer_tg_icon{
-    background-image: url('../images/sprites/footer_telegram.svg');
+.inst_icon path:nth-child(2),
+.tg_icon path:nth-child(2),
+.wa_icon path:nth-child(1),
+.wa_icon path:nth-child(2),
+.wa_icon path:nth-child(3),
+.wa_icon path:nth-child(4),
+.phn_icon rect{
+    fill:#CFD8DC;
 }
-.tg_icon:hover,
-.footer_tg_icon:hover{
-    background-image: url('../images/sprites/telegram_hover.svg');
+.inst_icon path:nth-child(3),
+.inst_icon path:nth-child(4),
+.inst_icon path:nth-child(5),
+.tg_icon path:nth-child(3),
+.tg_icon path:nth-child(4),
+.tg_icon path:nth-child(5),
+.wa_icon path:nth-child(5),
+.phn_icon path{
+    fill:#323232;
 }
-.wa_icon{
-    background-image: url('../images/sprites/whatsapp.svg');
+.footer_inst_icon path:nth-child(1),
+.footer_wa_icon path:nth-child(1),
+.footer_tg_icon path:nth-child(1),
+.footer_wa_icon path:nth-child(1),
+.footer_wa_icon path:nth-child(3),
+.footer_phn_icon rect{
+    fill: #ffffff;
+    fill-opacity: 0.5;
 }
-.footer_wa_icon{
-    background-image: url('../images/sprites/footer_whatsapp.svg');
+.footer_inst_icon path:nth-child(2),
+.footer_tg_icon path:nth-child(2),
+.footer_wa_icon path:nth-child(2),
+.footer_wa_icon path:nth-child(4){
+    fill: #ffffff;
+    fill-opacity: 0;
 }
-.wa_icon:hover,
-.footer_wa_icon:hover{
-    background-image: url('../images/sprites/whatsapphover.svg');
+.footer_inst_icon path:nth-child(3),
+.footer_inst_icon path:nth-child(4),
+.footer_inst_icon path:nth-child(5),
+.footer_wa_icon path:nth-child(5),
+.footer_tg_icon path:nth-child(3),
+.footer_tg_icon path:nth-child(4),
+.footer_tg_icon path:nth-child(5),
+.footer_phn_icon path{
+    fill:#323232;
 }
-.inst_icon{
-    background-image: url('../images/sprites/instagram.svg');
+.inst_icon:hover path:nth-child(1),
+.footer_inst_icon:hover path:nth-child(1){
+    fill: url(#instagram1);
+    fill-opacity: 1;
 }
-.footer_inst_icon{
-    background-image: url('../images/sprites/footer_instagram.svg');
+.inst_icon:hover path:nth-child(2),
+.footer_inst_icon:hover path:nth-child(2){
+    fill: url(#instagram2);
+    fill-opacity: 1;
 }
-.inst_icon:hover,
-.footer_inst_icon:hover{
-    background-image: url('../images/sprites/instagram_hover.svg');
+.wa_icon:hover path:nth-child(1),
+.wa_icon:hover path:nth-child(2),
+.wa_icon:hover path:nth-child(5),
+.footer_wa_icon:hover path:nth-child(1),
+.footer_wa_icon:hover path:nth-child(2),
+.footer_wa_icon:hover path:nth-child(5){
+    fill: #ffffff;
+    fill-opacity: 1;
 }
-.phn_icon{
-    background-image: url('../images/sprites/phone.svg');
+.wa_icon:hover path:nth-child(3),
+.footer_wa_icon:hover path:nth-child(3){
+    fill: #CFD8DC;
+    fill-opacity: 1;
 }
-.footer_phn_icon{
-    background-image: url('../images/sprites/footer_phone.svg');
+.wa_icon:hover path:nth-child(4),
+.footer_wa_icon:hover path:nth-child(4){
+    fill: #40C351;
+    fill-opacity: 1;
 }
-.phn_icon:hover,
-.footer_phn_icon:hover{
-    background-image: url('../images/sprites/phone_hover.svg');
+
+.inst_icon:hover path:nth-child(3),
+.inst_icon:hover path:nth-child(4),
+.inst_icon:hover path:nth-child(5),
+.footer_inst_icon:hover path:nth-child(3),
+.footer_inst_icon:hover path:nth-child(4),
+.footer_inst_icon:hover path:nth-child(5),
+.tg_icon:hover path:nth-child(4),
+.footer_tg_icon:hover path:nth-child(4){
+    fill: #ffffff;
 }
+.tg_icon:hover path:nth-child(1),
+.footer_tg_icon:hover path:nth-child(1){
+    fill: url(#telegram);
+    fill-opacity: 1;
+}
+.phn_icon:hover path,
+.footer_phn_icon:hover path{
+    fill: #ffffff;
+}
+.phn_icon:hover rect,
+.footer_phn_icon:hover rect{
+    fill: #2CA900;
+    fill-opacity: 1;
+}
+
 .tel{
+    cursor: pointer;
     position: relative;
 }
 .tel .tooltiptext {
