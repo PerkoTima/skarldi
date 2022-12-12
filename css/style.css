@@ -1216,7 +1216,9 @@ footer h4{
         justify-content: center;
         width: 100%;
         background: rgba(255, 255, 255, 0.01);
+        /* filter: blur(8px); */
         backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(10px);
         margin-bottom: -132px;
         transition: margin-bottom 0.5s linear;
     }
