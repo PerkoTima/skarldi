@@ -4,7 +4,12 @@ $(document).ready(function(){
   const CHAT_ID = '207535650'
   const URL_API = `https://api.telegram.org/bot${ TOKEN }/sendMessage`
   const IPINFO_TOKEN = 'c980e0b6c7a3df'
-
+  const popular_questions = document.querySelector('#popular_questions').getBoundingClientRect();
+  // let footer = document.querySelector('footer').getBoundingClientRect();
+  let about = document.querySelector('#about').getBoundingClientRect();
+  // console.log(about)
+  // console.log(popular_questions)
+  // console.log(popular_questions.bottom)
   $('a[href^="#"]').on("click", function (event) {
     event.preventDefault();
     let id  = $(this).attr('href'),
@@ -18,6 +23,7 @@ $(document).ready(function(){
     let height = $(window).scrollTop();
     height > 620 ? $('.menu_button').removeClass('disactive') : $('.menu_button').addClass('disactive');
     height > 130 ? $('nav').addClass('shadow') : $('nav').removeClass('shadow');
+    height > about.y - 200 && height < popular_questions.bottom - popular_questions.height ? $('.mobile_button_wrapper').addClass('show') : $('.mobile_button_wrapper').removeClass('show');
   });
   $('.more').on('click', function(){
     $('.results').not($(this).parent().find('.results')).slideUp(500);

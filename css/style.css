@@ -459,10 +459,6 @@ nav ul li a:hover{
     display: flex;
     flex-direction: row;
 }
-/* .result_data_wrapper .results.show{
-    opacity: 1;
-    height: 62px;
-} */
 .result_data_wrapper .results div{
     margin-right: 80px;
 }
@@ -771,8 +767,9 @@ nav ul li a:hover{
 .more_info img:hover{
     background: linear-gradient(180deg, #F5C946 0%, #FDC00C 100%);
 }
-
-
+.mobile_button_wrapper{
+    display: none;
+}
 footer{
     background-color: #F5C946;
     margin-top: 100px;
@@ -1209,10 +1206,36 @@ footer h4{
     .footer_button_wrapper{
         display: flex;
     }
+
+    
+    .mobile_button_wrapper{
+        /* display: none; */
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        justify-content: center;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.01);
+        backdrop-filter: blur(8px);
+        margin-bottom: -132px;
+        transition: margin-bottom 0.5s linear;
+    }
+    .mobile_button_wrapper.show{
+        /* display: flex; */
+        margin-bottom: 0px;
+    }
+    .mobile_button_wrapper .button{
+        margin-top: 16px;
+        margin-bottom: 60px;
+    }
     .footer_button{
         background: #FFFFFF;
         box-shadow: 0px 8px 16px rgb(142 107 0 / 25%);
         margin-top: 0px;
         margin-bottom: 82px;
+    }
+    .footer_button:hover{
+        background: #FFFFFF;
+        box-shadow: 0px 8px 16px rgb(142 107 0 / 25%);
     }
 }
