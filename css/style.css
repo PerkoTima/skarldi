@@ -1103,13 +1103,14 @@ footer h4{
     }
 
     .question_info{
-        width: 80%;
+        width: 100%;
         margin-top: 0;
         margin-bottom: 0;
     }
     .question_info h4{
         font-size: 16px;
         line-height: 26px;
+        width: 80%;
     }
     .question_info .text{
         font-size: 16px;
@@ -1209,21 +1210,18 @@ footer h4{
 
     
     .mobile_button_wrapper{
-        /* display: none; */
         display: flex;
         position: fixed;
         bottom: 0;
         justify-content: center;
         width: 100%;
         background: rgba(255, 255, 255, 0.01);
-        /* filter: blur(8px); */
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(10px);
         margin-bottom: -132px;
         transition: margin-bottom 0.5s linear;
     }
     .mobile_button_wrapper.show{
-        /* display: flex; */
         margin-bottom: 0px;
     }
     .mobile_button_wrapper .button{

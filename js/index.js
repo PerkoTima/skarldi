@@ -5,11 +5,7 @@ $(document).ready(function(){
   const URL_API = `https://api.telegram.org/bot${ TOKEN }/sendMessage`
   const IPINFO_TOKEN = 'c980e0b6c7a3df'
   const popular_questions = document.querySelector('#popular_questions').getBoundingClientRect();
-  // let footer = document.querySelector('footer').getBoundingClientRect();
   let about = document.querySelector('#about').getBoundingClientRect();
-  // console.log(about)
-  // console.log(popular_questions)
-  // console.log(popular_questions.bottom)
   $('a[href^="#"]').on("click", function (event) {
     event.preventDefault();
     let id  = $(this).attr('href'),
