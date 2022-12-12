@@ -88,7 +88,6 @@ a{
 .item_wrapper{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 100px;
 }
 .item{
     background: #F0F0F0;
@@ -117,7 +116,7 @@ a{
     position: absolute;
     background-color: #F5C946;
     border-radius: 100px;
-    padding: 38px;
+    padding: 37px;
     top: -65px;
 }
 .item h3{
@@ -133,7 +132,7 @@ a{
 }
 header{
     margin-bottom: 231px;
-    margin-top: 216px;
+    margin-top: 205px;
 }
 nav{
     padding-top: 14px;
@@ -389,8 +388,7 @@ nav ul li a:hover{
 
 
 .results_wrapper{
-    margin-top: 46px;
-    margin-bottom: 100px;
+    margin-top: 80px;
 }
 
 .result_item{
@@ -615,7 +613,7 @@ nav ul li a:hover{
     margin-bottom: 0;
 }
 .collaboration_list li span:first-child{
-    margin-right: 18px;
+    margin-right: 20px;
 }
 
 .collaboration_list li span:last-child{
@@ -638,7 +636,6 @@ nav ul li a:hover{
 .form_wrapper{
     width: 100%;
     background-color: #F5C946;
-    border-radius: 48px;
     margin-top: 80px;
     margin-bottom: 100px;
 }
@@ -778,6 +775,7 @@ nav ul li a:hover{
 
 footer{
     background-color: #F5C946;
+    margin-top: 100px;
 }
 footer .container{
     display: flex;
@@ -834,7 +832,9 @@ footer h4{
 .link:hover{
     text-decoration: underline;
 }
-
+.footer_button_wrapper{
+    display: none;
+}
 @media screen and (max-width: 1279px)  {
     .container{
         max-width: 768px;
@@ -842,13 +842,18 @@ footer h4{
     h1{
         font-size: 38px;
         line-height: 46px;
+        margin-bottom: 16px;
+        white-space: normal;
     }
     .header_h2{
         font-size: 20px;
         line-height: 24px;
     }
     .header_description{
-        width: 50%;
+        width: 40%;
+    }
+    .mt-130{
+        margin-top: 105px;
     }
     .header_description p,
     .header_description p .fb_color,
@@ -857,7 +862,7 @@ footer h4{
         line-height: 26px;
     }
     .header_button{
-        margin-top: 80px;
+        margin-top: 40px;
         margin-bottom: 60px;
     }
     .header_image{
@@ -866,8 +871,13 @@ footer h4{
     .header_section .photo_shadow{
         width: 346px;
         height: 406px;
+        filter: drop-shadow(0px 0.572327px 9.15723px rgba(0, 0, 0, 0.25));
+        border-radius: 27.4717px;
+        margin-top: 10px;
     }
-    .header_section .photo_shadow img{
+    .header_section .photo{
+        filter: drop-shadow(0px 0.572327px 9.15723px rgba(0, 0, 0, 0.25));
+        border-radius: 27.4717px;
         top: 18px;
         right: 18px;
     }
@@ -885,12 +895,16 @@ footer h4{
     .about_item h3{
         text-align: center;
     }
+    .results_wrapper{
+        margin-top: 40px;
+    }
     .result_wrapper{
         flex-direction: column-reverse;
         margin-top: 40px;
     }
     .result_item h4 {
         margin-left: 0;
+        margin-top: 0;
     }
     .result_data_wrapper{
         width: 100%;
@@ -903,6 +917,9 @@ footer h4{
     .feedback_wrapper .feed_wrap{
         margin-top: 0;
     }
+    .more{
+        width: 58%;
+    }
     .collab_item{
         width: 100%;
         margin-right: 0;
@@ -913,6 +930,12 @@ footer h4{
     }
     .collaboration_list{
         margin-bottom: 62px;
+    }
+    .collaboration_list li{
+        margin-bottom: 12px;
+    }
+    .collaboration_list li span:first-child{
+        margin-right: 14px;
     }
     .collab_item .button_wrapper .button {
         width: 100%;
@@ -928,21 +951,22 @@ footer h4{
 @media screen and (max-width: 767px) {
     h1{
         font-size: 32px;
+        margin-bottom: 16px;
     }
     h2{
-        margin-top: 100px;
-        font-size: 28px;
+        font-size: 36px;
+        line-height: 44px;
     }
     header{
         margin-bottom: 0;
-        margin-top: 135px;
+        margin-top: 88px;
     }
     nav{
         display: none;
     }
     .header_description{
         width: 100%;
-        margin-top: 60px;
+        margin-top: 50px;
         text-align: center;
     }
     .header_h2{
@@ -961,31 +985,26 @@ footer h4{
         align-items: center;
     }
     .header_section .photo_shadow{
-        width: 280px;
-        height: 328px;
+        width: 334px;
+        height: 392px;
+        margin-top: 0;
     }
     .header_image{
         width: 90%;
         display: flex;
         justify-content: center;
-        margin-right: -6px;
-    }
-    .header_section .photo_shadow img {
-        top: 12px;
-        right: 12px;
+        margin-right: -16px;
     }
     .container{
         width: 90%;
         margin-right: auto;
         margin-left: auto;
     }
-    .item{
-        padding-left: 20px;
-        padding-right: 20px;
+    .item h3{
+        margin-bottom: 16px;
     }
-    .item p{
-        font-size: 14px;
-        line-height: 20px;
+    .collaboration_list{
+        margin-bottom: 0;
     }
     .collaboration_list li{
         margin-bottom: 15px;
@@ -1000,11 +1019,23 @@ footer h4{
     .collaboration_list li span img{
         width: 25px;
     }
+    .collab_item p{
+        margin-bottom: 16px;
+    }
     .iti--separate-dial-code .iti__selected-dial-code {
         font-size: 16px!important;
     }
+    #collaboration .collab_item .button_wrapper .button{
+        margin-top: 46px;
+        margin-bottom: 5px;
+    }
     .button{
         font-size: 14px;
+        margin-top: 32px;
+        margin-right: auto;
+        margin-left: auto;
+        width: 81%;
+        margin-bottom: 40px;
     }
     .result_wrapper {
         margin-top: 24px;
@@ -1023,23 +1054,21 @@ footer h4{
         width: 100%;
     }
     .result_data_wrapper {
-        font-size: 14px;
+        font-size: 16px;
     }
     
     .result_data_wrapper .results{
         display: block;
-        width: 45%;
+        width: 38%;
     }
     .result_data_wrapper .partnership{
         flex-direction: column;
         margin-top: 24px;
+        margin-bottom: 20px;
     }
     .result_data_wrapper .partnership div:last-child{
         border-left: none;
         padding-left: 0;
-    }
-    .result_data_wrapper .partnership div span:first-child {
-        margin-bottom: 5px;
     }
     .result_data_wrapper .partnership div span:last-child {
         margin-bottom: 15px;
@@ -1052,7 +1081,11 @@ footer h4{
         text-align: center;
     }
     .result_data_wrapper .transparent_color {
-        font-size: 12px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .client_info{
+        margin-bottom: 16px;
     }
     .result_data_wrapper .results div span:last-child {
         font-size: 28px;
@@ -1074,7 +1107,20 @@ footer h4{
 
     .question_info{
         width: 80%;
+        margin-top: 0;
+        margin-bottom: 0;
     }
+    .question_info h4{
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .question_info .text{
+        font-size: 16px;
+        line-height: 28px;
+        margin-top: 16px;
+    }
+
+
     .tel{
         display: none;
     }
@@ -1135,7 +1181,38 @@ footer h4{
         fill: #2CA900;
         fill-opacity: 1;
     }
+    footer{
+        text-align: center;
+    }
     .footer_container{
         flex-direction: column;
+    }
+    .footer_info{
+        margin-top: 40px;
+    }
+    footer .footer_info h2{
+        font-style: normal;
+        font-weight: 300;
+        font-size: 36px;
+        line-height: 44px;
+    }
+    footer h4{
+        margin-bottom: 0;
+    }
+    .footer_section{
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    .arrow_up{
+        display: none;
+    }
+    .footer_button_wrapper{
+        display: flex;
+    }
+    .footer_button{
+        background: #FFFFFF;
+        box-shadow: 0px 8px 16px rgb(142 107 0 / 25%);
+        margin-top: 0px;
+        margin-bottom: 82px;
     }
 }
