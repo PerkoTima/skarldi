@@ -1034,6 +1034,9 @@ footer h4{
         width: 81%;
         margin-bottom: 40px;
     }
+    .form_button{
+        width: 100%;
+    }
     .result_wrapper {
         margin-top: 24px;
     }
@@ -1227,6 +1230,7 @@ footer h4{
     .mobile_button_wrapper .button{
         margin-top: 16px;
         margin-bottom: 60px;
+        width: 74%;
     }
     .footer_button{
         background: #FFFFFF;
