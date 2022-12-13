@@ -1034,6 +1034,10 @@ footer h4{
         width: 81%;
         margin-bottom: 40px;
     }
+    .form{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     .form_button{
         width: 100%;
     }
@@ -1241,5 +1245,93 @@ footer h4{
     .footer_button:hover{
         background: #FFFFFF;
         box-shadow: 0px 8px 16px rgb(142 107 0 / 25%);
+    }
+}
+
+@media screen and (max-width: 440px) {
+    h1{
+        font-size: 28px;
+        line-height: 34px;
+    }
+    .header_h2{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .header_description p,
+    .header_description p .fb_color,
+    .header_description p .inst_color{
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .header_section .photo_shadow{
+        width: 260px;
+        height: 306px;
+    }
+    h2{
+        font-size: 28px;
+        line-height: 34px;
+    }
+    .item p{
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .result_wrapper{
+        margin-top: 18px;
+    }
+    .results_wrapper .feedback_wrapper .feedback p,
+    .feedback_wrapper .client_name,
+    .feedback_wrapper .client_profession{
+        font-size: 10px;
+        line-height: 13px;
+    }
+    .result_data_wrapper .partnership div span:first-child{
+        margin-bottom: 12px;
+    }
+    .result_data_wrapper .partnership div:last-child span:last-child {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .result_data_wrapper .budget div span:last-child {
+        font-size: 30px;
+        line-height: 38px;
+    }
+    .result_data_wrapper .transparent_color{
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .icon img{
+        padding: 22px;
+        top: -50px;
+    }
+    .item h3{
+        margin-top: 83px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .collaboration_list li span:last-child{
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .button{
+        font-size: 12px;
+    }
+    .question_info h4{
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .more_info{
+        right: 35px;
+        bottom: 16px;
+    }
+    .more_info img{
+        padding: 12px;
+    }
+    h4{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    footer .footer_info h2{
+        font-size: 28px;
+        line-height: 34px;
     }
 }
